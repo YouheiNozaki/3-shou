@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./index.module.css";
 import { News } from "@/app/page";
+import Link from "next/link";
 
 type Props = {
   news: News;
@@ -9,8 +10,8 @@ type Props = {
 export default function NewsListItem({ news }: Props) {
   return (
     <li className={styles.list}>
-      {/* TODO:別の章で、リンクと正式な画像に差し替えます */}
-      <div className={styles.link}>
+      {/* 省略 */}
+      <Link href={`/news/${news.id}`} className={styles.link}>
         <Image
           className={styles.image}
           src="/no-image.png"
@@ -30,7 +31,7 @@ export default function NewsListItem({ news }: Props) {
             </span>
           </dd>
         </dl>
-      </div>
+      </Link>
     </li>
   );
 }

@@ -8,6 +8,8 @@
   width: 100%;
 }
 
+/* 省略 */
+
 .logoLink {
   display: flex;
 }
@@ -15,6 +17,12 @@
 .logo {
   height: 24px;
   width: auto;
+}
+
+.items {
+  display: flex;
+  color: #fff;
+  gap: 40px;
 }
 
 @media (max-width: 640px) {
